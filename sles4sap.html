@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>lib/sles4sap.pm</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel='stylesheet' href='./style.css' />
+</head>
+
+<body>
+
+
+
+<ul id="index"><li><a href="./index.html"><i>&lt;= Back to file list</i></a></li>
+  <li>
+    <ul>
+      <li><a href="#ensure_serialdev_permissions_for_sap">ensure_serialdev_permissions_for_sap</a></li>
+      <li><a href="#install_libopenssl_legacy">install_libopenssl_legacy</a></li>
+      <li><a href="#upload_hana_install_log">upload_hana_install_log</a></li>
+      <li><a href="#upload_nw_install_log">upload_nw_install_log</a></li>
+    </ul>
+  </li>
+</ul><h1>lib/sles4sap.pm</h1>
+
+<h2 id="ensure_serialdev_permissions_for_sap">ensure_serialdev_permissions_for_sap</h2>
+
+<p>Derived from &#39;ensure_serialdev_permissions&#39; function available in &#39;utils&#39;.</p>
+
+<p>Grant user permission to access serial port immediately as well as persisting over reboots. Used to ensure that testapi calls like script_run work for the test user as well as root.</p>
+
+<h2 id="install_libopenssl_legacy">install_libopenssl_legacy</h2>
+
+<pre><code> install_libopenssl_legacy($hana_path);</code></pre>
+
+<p>Install libopenssl1_0_0 for older (&lt;SPS03) HANA versions on SLE15+</p>
+
+<p>Set <code>$hana_path</code> to the HANA installation media.</p>
+
+<h2 id="upload_hana_install_log">upload_hana_install_log</h2>
+
+<pre><code> upload_hana_install_log();</code></pre>
+
+<p>Upload HANA installation logs.</p>
+
+<h2 id="upload_nw_install_log">upload_nw_install_log</h2>
+
+<pre><code> upload_nw_install_log();</code></pre>
+
+<p>Upload NW installation logs.</p>
+
+
+</body>
+
+</html>
+
+

@@ -1,0 +1,158 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>lib/repo_tools.pm</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel='stylesheet' href='./style.css' />
+</head>
+
+<body>
+
+
+
+<ul id="index"><li><a href="./index.html"><i>&lt;= Back to file list</i></a></li>
+  <li><a href="#repo_tools">repo_tools</a>
+    <ul>
+      <li><a href="#add_qa_head_repo">add_qa_head_repo</a></li>
+      <li><a href="#add_qa_web_repo">add_qa_web_repo</a></li>
+      <li><a href="#get_repo_var_name">get_repo_var_name</a></li>
+      <li><a href="#smt_wizard">smt_wizard</a></li>
+      <li><a href="#get_repo_var_name1">get_repo_var_name</a></li>
+      <li><a href="#type_password_twice">type_password_twice</a></li>
+      <li><a href="#rmt_wazard">rmt_wazard</a></li>
+      <li><a href="#rmt_mirror_repo">rmt_mirror_repo</a></li>
+      <li><a href="#rmt_import_data">rmt_import_data</a></li>
+      <li><a href="#prepare_source_repo">prepare_source_repo</a></li>
+      <li><a href="#disable_source_repo">disable_source_repo</a></li>
+      <li><a href="#generate_version">generate_version</a></li>
+    </ul>
+  </li>
+</ul><h1>lib/repo_tools.pm</h1>
+
+<h1 id="repo_tools">repo_tools</h1>
+
+<p>Tools for repositories used by openQA:</p>
+
+<ul>
+
+<li><p>add_qa_head_repo</p>
+
+</li>
+<li><p>add_qa_web_repo</p>
+
+</li>
+<li><p>smt_wizard</p>
+
+</li>
+<li><p>smt_mirror_repo</p>
+
+</li>
+<li><p>rmt_wizard</p>
+
+</li>
+<li><p>rmt_mirror_repo</p>
+
+</li>
+<li><p>prepare_source_repo</p>
+
+</li>
+<li><p>disable_source_repo</p>
+
+</li>
+<li><p>get_repo_var_name</p>
+
+</li>
+<li><p>type_password_twice</p>
+
+</li>
+<li><p>prepare_oss_repo</p>
+
+</li>
+<li><p>disable_oss_repo</p>
+
+</li>
+<li><p>generate_version</p>
+
+</li>
+</ul>
+
+<h2 id="add_qa_head_repo">add_qa_head_repo</h2>
+
+<pre><code> add_qa_head_repo();</code></pre>
+
+<p>Helper to add QA:HEAD repository repository (usually from IBS). This repository *is* mandatory.</p>
+
+<h2 id="add_qa_web_repo">add_qa_web_repo</h2>
+
+<pre><code> add_qa_web_repo();</code></pre>
+
+<p>Helper to add QA web repository repository. This repository is *not* mandatory.</p>
+
+<h2 id="get_repo_var_name">get_repo_var_name</h2>
+
+<pre><code> get_repo_var_name($repo_name);
+ </code></pre>
+
+<p>This takes something like &quot;MODULE_BASESYSTEM_SOURCE&quot; as parameter <code>$repo_name</code> and returns &quot;REPO_SLE15_SP1_MODULE_BASESYSTEM_SOURCE&quot; when being called on SLE15-SP1.</p>
+
+<h2 id="smt_wizard">smt_wizard</h2>
+
+<pre><code> smt_wizard();</code></pre>
+
+<p>Run smt wizard workflow and to get repository synced with smt server</p>
+
+<h2 id="get_repo_var_name1">get_repo_var_name</h2>
+
+<pre><code> get_repo_var_name();</code></pre>
+
+<p>Verify smt mirror function and mirror a tiny released repo from SCC. Hardcode it as SLES12-SP3-Installer-Updates.</p>
+
+<h2 id="type_password_twice">type_password_twice</h2>
+
+<pre><code> type_password_twice();</code></pre>
+
+<p>Type password, TAB, password, ALT+o. This is for use within YaST.</p>
+
+<h2 id="rmt_wazard">rmt_wazard</h2>
+
+<p>rmt_wizard();</p>
+
+<p>Install Repository Mirroring Tool and mariadb database</p>
+
+<h2 id="rmt_mirror_repo">rmt_mirror_repo</h2>
+
+<pre><code> rmt_mirror_repo();</code></pre>
+
+<p>Function to verify and enable repository mirror</p>
+
+<h2 id="rmt_import_data">rmt_import_data</h2>
+
+<pre><code> rmt_import_data($datafile);</code></pre>
+
+<p>RMT server import data about available repositories and the mirrored packages from disconnected RMT server, then verify imported repositories on new RMT server. <code>$datafile</code> is repository source.</p>
+
+<h2 id="prepare_source_repo">prepare_source_repo</h2>
+
+<pre><code> prepare_source_repo($repo_name);</code></pre>
+
+<p>Prepare SLES or OSS souce repositories</p>
+
+<h2 id="disable_source_repo">disable_source_repo</h2>
+
+<pre><code> disable_source_repo();</code></pre>
+
+<p>Disable source repositories</p>
+
+<h2 id="generate_version">generate_version</h2>
+
+<pre><code> generate_version($separator);</code></pre>
+
+<p>Generate SLE or openSUSE versions. <code>$separator</code> is separator used for version number, it will be default to _ if omitted. Example: SLES-12-4, openSUSE_Leap</p>
+
+
+</body>
+
+</html>
+
+
